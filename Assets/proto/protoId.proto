@@ -1,0 +1,51 @@
+enum ProtoId 
+{  
+    c2s_login_request         = 10001;	  //登录请求协议号  
+    s2c_login_reply           = 10002;	  //登录请求回包协议号  
+    c2s_register_request      = 10003;	  //注册请求协议号
+    s2c_register_reply        = 10004;    //注册请求回包协议号
+    c2s_logout_request		  = 10005;    //登出请求协议号
+    s2c_logout_reply          = 10006;    //登出请求回包协议号
+    c2s_heartbeat_request     = 10007;    //心跳请求协议号
+    s2c_heartbeat_reply       = 10008;    //心跳请求回包协议号
+
+    c2s_get_achieve_request   = 20003;    //获取玩家成绩请求协议号
+    s2c_get_achieve_reply     = 20004;    //获取玩家成绩请求回包协议号
+    c2s_get_room_list_request = 20005;	  //获取房间列表请求协议号
+    s2c_get_room_list_reply   = 20006;	  //获取房间列表请求回包协议号
+    c2s_create_room_request   = 20007;    //创建房间请求协议号
+    s2c_create_room_reply     = 20008;    //创建房间请求回包协议号
+    c2s_enter_room_request    = 20009;    //进入房间请求协议号
+    s2c_enter_room_reply      = 20010;	  //进入房间请求回包协议号
+    c2s_get_room_info_request = 20011;    //获取房间信息请求协议号
+    s2c_get_room_info_reply   = 20012;    //获取房间信息请求回包协议号
+    c2s_leave_room_request    = 20013;    //离开房间请求协议号
+    s2c_leave_room_reply	  = 20014;    //离开房间请求回包协议号
+
+    c2s_start_fight_request   = 30001;    //战斗请求协议号
+    s2c_start_fight_reply     = 30002;    //战斗请求回包协议号
+    c2s_fight_request         = 30003;    //进入战斗请求协议号
+    s2c_fight_reply           = 30004;    //进入战斗请求回包协议号
+    c2s_update_unit_request   = 30005;    //位置同步请求协议号
+    s2c_update_unit_reply     = 30006;    //位置同步请求回包协议号
+    c2s_shooting_request      = 30007;    //发射炮弹请求协议号
+    s2c_shooting_reply        = 30008;    //发射炮弹请求回包协议号
+    c2s_hit_request           = 30009;    //击中目标请求协议号
+    s2c_hit_reply             = 30010;    //击中目标请求回包协议号
+    c2s_result_request        = 30011;    //胜负判断请求协议
+    s2c_result_reply          = 30012;    //胜负判断请求回包协议
+
+    c2s_chat_request          = 40001;    //私聊请求协议号
+    s2c_chat_reply            = 40002;    //私聊请求回包协议号
+    c2s_group_chat_request    = 40003;    //群聊请求协议号
+    s2c_group_chat_reply      = 40004;    //群聊请求回包协议号
+
+    c2s_friend_list_request   = 50001;    //好友列表请求协议号
+    s2c_friend_list_reply     = 50002;    //好友列表请求回包协议号
+    c2s_add_friend_request    = 50003;    //添加好友请求协议号
+    s2c_add_friend_reply      = 50004;    //添加好友回包协议号
+    c2s_del_friend_request    = 50005;    //删除好友请求协议号
+    s2c_del_friend_reply      = 50006;    //删除好友请求回包协议号
+    c2s_friend_info_request   = 50007;    //好友资料请求协议号
+    s2c_friend_Info_reply     = 50008;    //好友资料请求回包协议号
+}  

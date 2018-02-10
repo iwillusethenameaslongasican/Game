@@ -1,0 +1,9 @@
+#!/bin/sh  
+  
+  
+filelist=`ls /Users/ouyanghanyan/code/unity/TankGame/Assets/proto/*.proto`  
+for file in $filelist  
+do  
+echo $file  
+mono /Users/ouyanghanyan/Downloads/protogen-master/bin/protogen.exe -i:$file -o:${file%.*}.cs  
+done 

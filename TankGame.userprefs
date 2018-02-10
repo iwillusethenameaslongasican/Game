@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{4F4B0DD0-173B-0BEA-357D-158FDF3C1BEA}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PanelCore/LoginPanel.cs">
+    <Files>
+      <File FileName="Assets/Path.cs" Line="1" Column="1" />
+      <File FileName="Assets/PanelCore/RoomListPanel.cs" Line="228" Column="46" />
+      <File FileName="Assets/PanelCore/FriendPanel.cs" Line="151" Column="1" />
+      <File FileName="Assets/proto/ProtoHelper.cs" Line="360" Column="16" />
+      <File FileName="Assets/PanelCore/SearchPanel.cs" Line="12" Column="29" />
+      <File FileName="Assets/PanelCore/LoginPanel.cs" Line="13" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.TankGame PreferredExecutionTarget="Unity.Editor" />
+</Properties>
