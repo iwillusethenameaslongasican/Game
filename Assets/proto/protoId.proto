@@ -39,6 +39,8 @@ enum ProtoId
     s2c_chat_reply            = 40002;    //私聊请求回包协议号
     c2s_group_chat_request    = 40003;    //群聊请求协议号
     s2c_group_chat_reply      = 40004;    //群聊请求回包协议号
+    c2s_world_chat_request    = 40005;    //世界聊天请求协议号
+    s2c_world_chat_reply      = 40006;    //世界聊天请求回包协议号
 
     c2s_friend_list_request   = 50001;    //好友列表请求协议号
     s2c_friend_list_reply     = 50002;    //好友列表请求回包协议号

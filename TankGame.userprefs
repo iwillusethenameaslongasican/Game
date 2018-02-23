@@ -1,12 +1,28 @@
 ﻿<Properties StartupConfiguration="{4F4B0DD0-173B-0BEA-357D-158FDF3C1BEA}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PanelCore/LoginPanel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PanelCore/WinPanel.cs">
     <Files>
       <File FileName="Assets/Path.cs" Line="1" Column="1" />
-      <File FileName="Assets/PanelCore/RoomListPanel.cs" Line="228" Column="46" />
-      <File FileName="Assets/PanelCore/FriendPanel.cs" Line="151" Column="1" />
-      <File FileName="Assets/proto/ProtoHelper.cs" Line="360" Column="16" />
-      <File FileName="Assets/PanelCore/SearchPanel.cs" Line="12" Column="29" />
-      <File FileName="Assets/PanelCore/LoginPanel.cs" Line="13" Column="17" />
+      <File FileName="Assets/PanelCore/ChatPanel.cs" Line="236" Column="32" />
+      <File FileName="Assets/PanelCore/WinPanel.cs" Line="6" Column="3" />
+      <File FileName="Assets/PanelCore/RoomPanel.cs" Line="164" Column="15" />
+      <File FileName="Assets/PanelCore/FriendPanel.cs" Line="184" Column="13" />
+      <File FileName="Assets/core/panel/PanelMgr.cs" Line="57" Column="1" />
+      <File FileName="Assets/proto/ProtoHelper.cs" Line="344" Column="16" />
+      <File FileName="Assets/core/net/ByteBuffer.cs" Line="1" Column="1" />
+      <File FileName="Assets/core/net/Connection.cs" Line="227" Column="20" />
+      <File FileName="Assets/core/net/MsgDistribution.cs" Line="14" Column="13" />
+      <File FileName="Assets/core/net/NetMgr.cs" Line="1" Column="1" />
+      <File FileName="Assets/core/net/PackCodec.cs" Line="1" Column="1" />
+      <File FileName="Assets/core/panel/PanelBase.cs" Line="1" Column="1" />
+      <File FileName="Assets/core/Root.cs" Line="23" Column="29" />
+      <File FileName="Assets/PanelCore/InfoPanel.cs" Line="6" Column="7" />
+      <File FileName="Assets/PanelCore/LoginPanel.cs" Line="68" Column="15" />
+      <File FileName="Assets/PanelCore/OptionPanel.cs" Line="1" Column="1" />
+      <File FileName="Assets/PanelCore/RegPanel.cs" Line="8" Column="7" />
+      <File FileName="Assets/PanelCore/RoomListPanel.cs" Line="66" Column="91" />
+      <File FileName="Assets/PanelCore/SearchPanel.cs" Line="10" Column="7" />
+      <File FileName="Assets/PanelCore/TipPanel.cs" Line="6" Column="7" />
+      <File FileName="Assets/PanelCore/TitlePanel.cs" Line="5" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

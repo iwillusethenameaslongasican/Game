@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//信息面板
 public class InfoPanel : PanelBase
 {
     private Button closeBtn;

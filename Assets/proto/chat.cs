@@ -113,6 +113,54 @@ namespace code.unity.TankGame.Assets.proto.chat
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"c2s_world_chat_request")]
+  public partial class c2s_world_chat_request : global::ProtoBuf.IExtensible
+  {
+    public c2s_world_chat_request() {}
+    
+    private string _content;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"content", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string content
+    {
+      get { return _content; }
+      set { _content = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"s2c_world_chat_reply")]
+  public partial class s2c_world_chat_reply : global::ProtoBuf.IExtensible
+  {
+    public s2c_world_chat_reply() {}
+    
+    private uint _id;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public uint id
+    {
+      get { return _id; }
+      set { _id = value; }
+    }
+    private string _content;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"content", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string content
+    {
+      get { return _content; }
+      set { _content = value; }
+    }
+    private time_section _time;
+    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"time", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public time_section time
+    {
+      get { return _time; }
+      set { _time = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"time_section")]
   public partial class time_section : global::ProtoBuf.IExtensible
   {

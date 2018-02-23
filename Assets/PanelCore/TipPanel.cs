@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//提示面板
 public class TipPanel : PanelBase
 {
     private Text text;

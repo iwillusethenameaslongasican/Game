@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//胜负面板
 public class WinPanel : PanelBase
 {
     private Image winImage;

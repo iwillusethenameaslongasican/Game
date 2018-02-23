@@ -8,6 +8,7 @@ using code.unity.TankGame.Assets.proto.player;
 using Net;
 using System;
 
+//房间列表面板
 public class RoomListPanel : PanelBase
 {
     private Text idText;
@@ -41,7 +42,7 @@ public class RoomListPanel : PanelBase
         winText = winTrans.Find("WinText").GetComponent<Text>();
         lostText = winTrans.Find("LostText").GetComponent<Text>();
         friendBtn = winTrans.Find("FriendBtn").GetComponent<Button>();
-        msgBtn = winTrans.Find("WinBtn").GetComponent<Button>();
+        msgBtn = winTrans.Find("MsgBtn").GetComponent<Button>();
 
         friendBtn.onClick.AddListener(OnFriendClick);
         //msgBtn.onClick.AddListener(OnMsgClick);
@@ -64,8 +65,8 @@ public class RoomListPanel : PanelBase
         NetMgr.servConn.msgDist.AddListener("s2c_get_achieve_reply", OnRecvGetAchieve);
         NetMgr.servConn.msgDist.AddListener("s2c_get_room_list_reply", OnRecvGetRoomList);
 
-        //发送查询
-        c2s_get_room_list_request request1 = new c2s_get_room_list_request();
+		//发送查询
+		c2s_get_room_list_request request1 = new c2s_get_room_list_request();
         byte[] data = NetMgr.servConn.CreateData((int)ProtoId.c2s_get_room_list_request, request1);
 		NetMgr.servConn.SendMessage(data);
 
@@ -241,6 +242,5 @@ public class RoomListPanel : PanelBase
     public void OnFriendClick(){
         PanelMgr.instance.OpenPanel<FriendPanel>("", "");
     }
-
 
 }

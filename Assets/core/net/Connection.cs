@@ -224,6 +224,7 @@ public class Connection
 		}
 	}
 
+    //数据包描述 用于debug
     public string GetDesc(byte[] Byte)
     {
         string str = "";

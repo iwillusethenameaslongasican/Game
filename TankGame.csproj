@@ -266,13 +266,11 @@
     <Compile Include="Assets\core\net\MsgDistribution.cs" />
     <Compile Include="Assets\core\net\NetMgr.cs" />
     <Compile Include="Assets\core\net\PackCodec.cs" />
-    <Compile Include="Assets\core\net\ProtocolBase.cs" />
-    <Compile Include="Assets\core\net\ProtocolBytes.cs" />
-    <Compile Include="Assets\core\net\ProtocolStr.cs" />
     <Compile Include="Assets\core\panel\PanelBase.cs" />
     <Compile Include="Assets\core\panel\PanelMgr.cs" />
     <Compile Include="Assets\core\Root.cs" />
     <Compile Include="Assets\MultiBattle.cs" />
+    <Compile Include="Assets\PanelCore\ChatPanel.cs" />
     <Compile Include="Assets\PanelCore\FriendPanel.cs" />
     <Compile Include="Assets\PanelCore\InfoPanel.cs" />
     <Compile Include="Assets\PanelCore\LoginPanel.cs" />
@@ -280,6 +278,7 @@
     <Compile Include="Assets\PanelCore\RegPanel.cs" />
     <Compile Include="Assets\PanelCore\RoomListPanel.cs" />
     <Compile Include="Assets\PanelCore\RoomPanel.cs" />
+    <Compile Include="Assets\PanelCore\SearchPanel.cs" />
     <Compile Include="Assets\PanelCore\TipPanel.cs" />
     <Compile Include="Assets\PanelCore\TitlePanel.cs" />
     <Compile Include="Assets\PanelCore\WinPanel.cs" />
@@ -292,7 +291,6 @@
     <Compile Include="Assets\proto\protoId.cs" />
     <Compile Include="Assets\proto\room.cs" />
     <Compile Include="Assets\Tank.cs" />
-    <Compile Include="Assets\PanelCore\SearchPanel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

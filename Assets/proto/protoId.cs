@@ -122,6 +122,12 @@ namespace code.unity.TankGame.Assets.proto.protoId
       [global::ProtoBuf.ProtoEnum(Name=@"s2c_group_chat_reply", Value=40004)]
       s2c_group_chat_reply = 40004,
             
+      [global::ProtoBuf.ProtoEnum(Name=@"c2s_world_chat_request", Value=40005)]
+      c2s_world_chat_request = 40005,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"s2c_world_chat_reply", Value=40006)]
+      s2c_world_chat_reply = 40006,
+            
       [global::ProtoBuf.ProtoEnum(Name=@"c2s_friend_list_request", Value=50001)]
       c2s_friend_list_request = 50001,
             

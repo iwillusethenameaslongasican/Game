@@ -6,6 +6,7 @@ using code.unity.TankGame.Assets.proto.player;
 using code.unity.TankGame.Assets.proto.protoId;
 using Net;
 
+//登陆面板
 public class LoginPanel : PanelBase
 {
     private InputField idInput;
@@ -36,11 +37,13 @@ public class LoginPanel : PanelBase
     }
 #endregion
 
+    //申请按钮
     public void OnRegClick() {
         PanelMgr.instance.OpenPanel<RegPanel>("");
         Close();
     }
 
+    //登陆按钮
     public void OnLoginClick() {
         // 用户名和密码不为空
         if(idInput.text == null || pwInput.text == null) {
@@ -62,6 +65,7 @@ public class LoginPanel : PanelBase
         NetMgr.servConn.SendMessage(data, "s2c_login_reply", OnLoginBack);
     }
 
+    //接收登陆回包数据
     public void OnLoginBack(byte[] Byte) {
         ByteBuffer buffer = new ByteBuffer(Byte);
         int size = Byte.Length;
@@ -73,6 +77,7 @@ public class LoginPanel : PanelBase
             GameMgr.instance.id = reply.id;
             // 进入标题界面
             PanelMgr.instance.OpenPanel<RoomListPanel>("");
+            PanelMgr.instance.OpenPanel<ChatPanel>("");
             Close();
         }
         else {

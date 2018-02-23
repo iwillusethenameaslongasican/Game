@@ -5,6 +5,7 @@ using code.unity.TankGame.Assets.proto.player;
 using code.unity.TankGame.Assets.proto.protoId;
 using Net;
 
+//申请按钮
 public class RegPanel : PanelBase
 {
     private InputField idInput;

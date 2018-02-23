@@ -9,6 +9,7 @@ public class Root : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        //监听心跳包协议
         NetMgr.servConn.msgDist.AddListener("s2c_heartbeat_reply", OnRecvHeartbeat);
         PanelMgr.instance.OpenPanel<LoginPanel>("");
 	}

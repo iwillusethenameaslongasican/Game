@@ -7,6 +7,7 @@ using code.unity.TankGame.Assets.proto.friend;
 using Net;
 using System;
 
+//好友面板
 public class FriendPanel : PanelBase
 {
 	private Transform content;
@@ -44,6 +45,7 @@ public class FriendPanel : PanelBase
 		closeBtn.onClick.AddListener(OnCloseClick);
         addBtn.onClick.AddListener(OnAddClick);
 
+        //请求好友列表
 		c2s_friend_list_request request = new c2s_friend_list_request();
 		byte[] date = NetMgr.servConn.CreateData((int)ProtoId.c2s_friend_list_request, request);
 		NetMgr.servConn.SendMessage(date, "s2c_friend_list_reply", OnReflashBack);
@@ -56,12 +58,14 @@ public class FriendPanel : PanelBase
 	}
 	#endregion
 
+    //刷新按钮
     public void OnReflashClick(){
         c2s_friend_list_request request = new c2s_friend_list_request();
 		byte[] date = NetMgr.servConn.CreateData((int)ProtoId.c2s_friend_list_request, request);
 		NetMgr.servConn.SendMessage(date, "s2c_friend_list_reply", OnReflashBack);
     }
 
+    //接收刷新回包数据
     public void OnReflashBack(byte[] Byte){
 		ClearFriendUnit();
         ByteBuffer buffer = new ByteBuffer(Byte);
@@ -76,10 +80,12 @@ public class FriendPanel : PanelBase
             string username = infos[i].username;
             UInt32 image = infos[i].image;
             UInt32 status = infos[i].status;
+            //生成好友面板
             GenerateFriendUnit(i, Id, username, image, status);
 		}
     }
 
+    //清空好友面板
 	public void ClearFriendUnit()
 	{
 		for (int i = 0; i < content.childCount; i++)
@@ -126,25 +132,57 @@ public class FriendPanel : PanelBase
         chatBtn.name = friendId.ToString();
         infoBtn.name = friendId.ToString();
         delBtn.name = friendId.ToString();
-		//chatBtn.onClick.AddListener(delegate ()
-		//{
-		//	OnChatBtnClick(btn.name);
-		//});
+		chatBtn.onClick.AddListener(delegate ()
+		{
+			OnChatBtnClick(chatBtn.name);
+		});
   //      infoBtn.onClick.AddListener(delegate ()
 		//{
-  //          OnInfoBtnClick(btn.name);
+  //          OnInfoBtnClick(infoBtn.name);
 		//});
-		//delBtn.onClick.AddListener(delegate ()
-		//{
-		//	OnDelBtnClick(btn.name);
-		//});
+		delBtn.onClick.AddListener(delegate ()
+		{
+			OnDelBtnClick(delBtn.name);
+		});
 	}
 
     public void OnCloseClick(){
         Close();
     }
 
+    //添加好友按钮
     public void OnAddClick(){
         PanelMgr.instance.OpenPanel<SearchPanel>("", "");
+    }
+
+    //删除好友按钮
+    public void OnDelBtnClick(string id){
+        c2s_del_friend_request request = new c2s_del_friend_request();
+        request.id = UInt32.Parse(id);
+		byte[] date = NetMgr.servConn.CreateData((int)ProtoId.c2s_del_friend_request, request);
+		NetMgr.servConn.SendMessage(date, "s2c_del_friend_reply", OnDelBack);
+    }
+
+    //接收删除好友回包数据
+	public void OnDelBack(byte[] Byte)
+	{
+		ByteBuffer buffer = new ByteBuffer(Byte);
+		int size = Byte.Length;
+		int typeId = buffer.ReadInt();
+        s2c_del_friend_reply reply = PackCodec.Deserialize<s2c_del_friend_reply>(buffer.ReadBytes(size - sizeof(Int32)));
+		Int32 ret = reply.result;
+		if (ret == 1)
+		{
+			PanelMgr.instance.OpenPanel<TipPanel>("", "删除成功！");
+		}
+		else
+		{
+			PanelMgr.instance.OpenPanel<TipPanel>("", "添加失败，好友不存在！");
+		}
+	}
+
+    //好友聊天按钮
+    public void OnChatBtnClick(string id){
+        ChatPanel.SetFriendId(UInt32.Parse(id));
     }
 }

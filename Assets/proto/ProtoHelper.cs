@@ -149,6 +149,14 @@ public class ProtoHelper
         {
             return "s2c_group_chat_reply";
         }
+		else if (typeId == (int)ProtoId.c2s_world_chat_request)
+		{
+			return "c2s_world_chat_request";
+		}
+        else if (typeId == (int)ProtoId.s2c_world_chat_reply)
+		{
+			return "s2c_world_chat_reply";
+		}
         else if (typeId == (int)ProtoId.c2s_friend_list_request)
         {
             return "c2s_friend_list_request";
@@ -326,6 +334,14 @@ public class ProtoHelper
 		else if (protoName == "s2c_group_chat_reply")
 		{
 			return 40004;
+		}
+		else if (protoName == "c2s_world_chat_request")
+		{
+			return 40005;
+		}
+		else if (protoName == "s2c_world_chat_reply")
+		{
+			return 40006;
 		}
 		else if (protoName == "c2s_friend_list_request")
 		{
